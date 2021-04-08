@@ -26,7 +26,7 @@ const Home = () => {
           data && data.getCityByName && 
           <>
             <h1>City Name: { data.getCityByName.name }</h1>
-            <h1>Temperature: { data.getCityByName.weather.temperature.actual }</h1>
+            <h1>Temperature: {Math.round(data.getCityByName.weather.temperature.actual - 273.15) }°C</h1>
             <h1>Description: { data.getCityByName.weather.summary.description }</h1>
             <h1>Wind Speed: { data.getCityByName.weather.wind.speed }</h1>
           </>
