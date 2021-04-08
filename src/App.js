@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './Pages/Home';
-import {ApolloClient, InMemoryCache, ApolloProvider, HttpLink} from '@apollo/client'
+import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client'
 
 function App() {
   const client = new ApolloClient({
@@ -10,7 +10,6 @@ function App() {
   return (
     <ApolloProvider {...{client}}>
       <Home />
-
     </ApolloProvider>
   );
 }
